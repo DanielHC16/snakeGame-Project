@@ -14,7 +14,7 @@ let gameInterval;
 let gameSpeedDelay = 200;
 let gameStarted = false;
 let foodColorToggle = true; // Toggle food color
-const snakeColors = ['#b4c0ae', '#8cb454', '#085c44', '#0c4522', '#171c0c']; // Colors for the snake
+const snakeColors = ['#b4c0ae', '#8cb454', '#085c44', '#0c4522', '#171c0c']; 
 let snakeColorIndex = 0; // Index to keep track of the snake color
 let food = generateFood(); // Initialize food
 
@@ -54,7 +54,7 @@ function drawFood() {
   if (gameStarted) {
     const foodElement = createGameElement('div', 'food');
     setPosition(foodElement, food);
-    foodElement.style.backgroundColor = foodColorToggle ? 'grey' : 'brown'; // Alternate food color
+    foodElement.style.backgroundColor = foodColorToggle ? 'grey' : 'brown'; 
     board.appendChild(foodElement);
   }
 }
@@ -63,7 +63,7 @@ function drawFood() {
 function generateFood() {
   const x = Math.floor(Math.random() * gridSize) + 1;
   const y = Math.floor(Math.random() * gridSize) + 1;
-  foodColorToggle = !foodColorToggle; // Toggle the food color
+  foodColorToggle = !foodColorToggle; 
   return { x, y };
 }
 
@@ -88,10 +88,10 @@ function move() {
   snake.unshift(head);
 
   if (head.x === food.x && head.y === food.y) {
-    food = generateFood(); // Generate new food and toggle color
+    food = generateFood(); 
     increaseSpeed();
     snakeColorIndex = (snakeColorIndex + 1) % snakeColors.length; // Change snake color
-    clearInterval(gameInterval); // Clear past interval
+    clearInterval(gameInterval); 
     gameInterval = setInterval(() => {
       move();
       checkCollision();
