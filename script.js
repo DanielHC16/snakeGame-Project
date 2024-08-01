@@ -14,7 +14,7 @@ let gameInterval;
 let gameSpeedDelay = 200;
 let gameStarted = false;
 let foodColorToggle = true; // Toggle food color
-const snakeColors = ['#18215d', '#ff5733', '#33ff57', '#3357ff', '#f3f333']; // Colors for the snake
+const snakeColors = ['#b4c0ae', '#8cb454', '#085c44', '#0c4522', '#171c0c']; // Colors for the snake
 let snakeColorIndex = 0; // Index to keep track of the snake color
 let food = generateFood(); // Initialize food
 
@@ -54,7 +54,7 @@ function drawFood() {
   if (gameStarted) {
     const foodElement = createGameElement('div', 'food');
     setPosition(foodElement, food);
-    foodElement.style.backgroundColor = foodColorToggle ? 'red' : 'blue'; // Alternate food color
+    foodElement.style.backgroundColor = foodColorToggle ? 'violet' : 'purple'; // Alternate food color
     board.appendChild(foodElement);
   }
 }

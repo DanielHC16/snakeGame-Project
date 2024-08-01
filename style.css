@@ -75,12 +75,12 @@ body,
 
 .snake{
     background-color: #18215d;
-    border: #18215d 1px dotted;
+    border: #18215d 1px;
 }
 
 .food{
     background-color: red;
-    border: rgb(210, 45, 45) 5px solid;
+    
 }
 
 #logo{
