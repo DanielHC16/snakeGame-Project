@@ -54,7 +54,7 @@ function drawFood() {
   if (gameStarted) {
     const foodElement = createGameElement('div', 'food');
     setPosition(foodElement, food);
-    foodElement.style.backgroundColor = foodColorToggle ? 'violet' : 'purple'; // Alternate food color
+    foodElement.style.backgroundColor = foodColorToggle ? 'grey' : 'brown'; // Alternate food color
     board.appendChild(foodElement);
   }
 }
@@ -199,7 +199,7 @@ function updateHighScore() {
   const currentScore = snake.length - 1;
   if (currentScore > highScore) {
     highScore = currentScore;
-    highScoreText.textContent = highScore.toString().padStart(3, '0');
+    highScoreText.textContent = 'HI ' + highScore.toString().padStart(3, '0');
   }
   highScoreText.style.display = 'block';
 }
